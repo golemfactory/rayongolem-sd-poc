@@ -28,15 +28,15 @@ ENV PATH="/opt/miniconda3/bin:${PATH}"
 RUN bash -c "echo 'PATH=/opt/miniconda3/bin:${PATH}' >> /root/.bashrc"
 RUN conda install -y cudatoolkit
 
-RUN pip install wheel setuptools typing-extensions
+RUN pip install -U pip wheel setuptools typing-extensions
+RUN pip install poetry && \
+	poetry config virtualenvs.create false
 
 WORKDIR /app
 
 COPY pyproject.toml README.md /app/
 COPY ray_on_golem/__init__.py /app/ray_on_golem/__init__.py
 
-RUN pip install poetry && \
-	poetry config virtualenvs.create false
 RUN poetry install --no-interaction --no-ansi --only ray
 
 RUN pip install pillow
