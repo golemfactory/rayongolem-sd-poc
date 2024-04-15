@@ -16,4 +16,5 @@ priority = "explicit"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-
+gvmkit-build = "^0.3.18"
+ray-on-golem = {version = "^0.10.0a0", source = "test-pypi"}
