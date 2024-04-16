@@ -1,5 +1,6 @@
-diffusers==0.6.0
-scipy==1.9.3
+accelerate==0.29.2
+diffusers==0.27.2
+scipy==1.13.0
 torch==1.13.0
-transformers==4.24.0
+transformers==4.25.1
 ftfy==6.1.1
