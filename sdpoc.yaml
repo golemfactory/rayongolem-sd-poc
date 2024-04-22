@@ -3,6 +3,8 @@ cluster_name: gpu-cluster
 
 # The maximum number of workers the cluster will have at any given time
 max_workers: 10
+min_workers: 4
+idle_timeout_minutes: 5
 
 # The cloud provider-specific configuration properties.
 provider:
@@ -29,6 +31,8 @@ available_node_types:
     node_config: {}
 
   ray.worker.default:
+    min_workers: 4
+    max_workers: 4
     resources: {}
     node_config: {}
 
