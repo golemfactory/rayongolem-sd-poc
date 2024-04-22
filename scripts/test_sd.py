@@ -41,7 +41,8 @@ img_done = 0
 results = []
 
 while img_done < args.num_images:
-    for ridx in renderers_available:
+    print("Renderers available", renderers_available)
+    for ridx in list(renderers_available):
         renderers_available.remove(ridx)
         if img_cnt < args.num_images:
             print("scheduling: ", img_cnt, "on: ", ridx)
