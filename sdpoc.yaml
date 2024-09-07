@@ -1,5 +1,4 @@
-# Ray on Golem cluster name
-cluster_name: gpu-cluster
+# Ray on Golem cluster name cluster_name: gpu-cluster
 
 # The maximum number of workers the cluster will have at any given time
 max_workers: 10
@@ -18,7 +17,6 @@ provider:
         image_tag: "blueshade/rayongolem-sd-poc:1.0"
         outbound_urls: []
         runtime: "vm-nvidia"
-      subnet_tag: "ray"
 
 file_mounts: {
   # <remote_path>: <local_path>
